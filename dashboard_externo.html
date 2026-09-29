@@ -177,7 +177,9 @@ function setStatus(ok, msg){
   text.textContent = msg;
 }
 
-const EXTERNAL_DATA_URL = 'https://1drv.ms/u/c/07a4c6f70f86b3b6/IQBDhyNpju25RZJlSydk9vbJAQHLIG6uXEDZgDVflZ1vy1M?e=fZYQVr';
+const ONEDRIVE_URL = 'https://1drv.ms/u/c/07a4c6f70f86b3b6/IQBDhyNpju25RZJlSydk9vbJAQHLIG6uXEDZgDVflZ1vy1M?e=fZYQVr';
+// Proxy gratuito que contorna o bloqueio de CORS do OneDrive
+const EXTERNAL_DATA_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(ONEDRIVE_URL);
 
 async function fetchData(){
   try{
